@@ -1,0 +1,44 @@
+:root{
+    --hue: 194;
+    --Darkmode: hsl(var(--hue), 5%,7%);
+    --colorprincipal: hsl(var(--hue),40%,98%);
+    --textcolor:rgb(7, 88, 209);
+}
+
+html.light{
+   background-color: var(--colorprincipal);
+   color: var(--textcolor)
+}
+
+html.light  .ph-sun,
+html:not(.light) .ph-moon {
+    display:none
+}
+
+#toggle-mode{
+    font-size: 2.2rem;
+    line-height: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--textcolor);
+
+}
+
+html{ /* configurar para body*/
+    background-color: var(--Darkmode);
+    color: var(--textcolor);
+}
+
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    appearance: none;
+}
