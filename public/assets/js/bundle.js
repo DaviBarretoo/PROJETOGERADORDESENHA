@@ -118,7 +118,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `*{
 }
 
 
-`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,SAAS;IACT,sBAAsB,EAAE,uCAAuC;AACnE","sourcesContent":["*{\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box; /* Para fazer o calculo de forma exata*/\r\n}\r\n\r\n\r\n"],"sourceRoot":""}]);
+
+`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,SAAS;IACT,sBAAsB,EAAE,uCAAuC;AACnE","sourcesContent":["*{\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box; /* Para fazer o calculo de forma exata*/\r\n}\r\n\r\n\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
