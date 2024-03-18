@@ -1,18 +1,31 @@
 :root{
-    --hue: 194;
-    --Darkmode: hsl(var(--hue), 5%,7%);
-    --colorprincipal: hsl(var(--hue),40%,98%);
-    --textcolor:rgb(7, 88, 209);
+    --Darkmode: #2b2a2a;
+    --colorprincipal:#e0edfc;
+    --textcolor:#EBF0F2;
+    --textcolorsun: #252525;
 }
 
+
+
 html.light{
-   background-color: var(--colorprincipal);
-   color: var(--textcolor)
+    background-image: url('../img/main-bg2.svg');
+    background-size: cover; 
+    background-position: center center; 
+   color: var(--textcolorsun)
 }
 
 html.light  .ph-sun,
-html:not(.light) .ph-moon {
-    display:none
+html:not(.light) .ph-moon  {
+    display:none;
+    
+}
+
+html.light .ph-moon{
+color: black;
+}
+
+html:not(.light) .container{
+    background-color: #020000 ;
 }
 
 #toggle-mode{
@@ -25,9 +38,12 @@ html:not(.light) .ph-moon {
 
 }
 
-html{ /* configurar para body*/
-    background-color: var(--Darkmode);
+html{ 
+    background-image: url('../img/main-bg.svg');
+    background-size: cover; 
+    background-position: center center; 
     color: var(--textcolor);
+    
 }
 
 
@@ -42,3 +58,4 @@ html{ /* configurar para body*/
     border: 0;
     appearance: none;
 }
+

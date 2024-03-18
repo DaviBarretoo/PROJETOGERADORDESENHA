@@ -36,26 +36,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../img/main-bg2.svg */ "./src/assets/img/main-bg2.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../img/main-bg.svg */ "./src/assets/img/main-bg.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `:root{
-    --hue: 194;
-    --Darkmode: hsl(var(--hue), 5%,7%);
-    --colorprincipal: hsl(var(--hue),40%,98%);
-    --textcolor:rgb(7, 88, 209);
+    --Darkmode: #2b2a2a;
+    --colorprincipal:#e0edfc;
+    --textcolor:#EBF0F2;
+    --textcolorsun: #252525;
 }
 
+
+
 html.light{
-   background-color: var(--colorprincipal);
-   color: var(--textcolor)
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-size: cover; 
+    background-position: center center; 
+   color: var(--textcolorsun)
 }
 
 html.light  .ph-sun,
-html:not(.light) .ph-moon {
-    display:none
+html:not(.light) .ph-moon  {
+    display:none;
+    
+}
+
+html.light .ph-moon{
+color: black;
+}
+
+html:not(.light) .container{
+    background-color: #020000 ;
 }
 
 #toggle-mode{
@@ -68,9 +88,12 @@ html:not(.light) .ph-moon {
 
 }
 
-html{ /* configurar para body*/
-    background-color: var(--Darkmode);
+html{ 
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    background-size: cover; 
+    background-position: center center; 
     color: var(--textcolor);
+    
 }
 
 
@@ -84,7 +107,9 @@ html{ /* configurar para body*/
     padding: 0;
     border: 0;
     appearance: none;
-}`, "",{"version":3,"sources":["webpack://./src/assets/css/darkmode.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,kCAAkC;IAClC,yCAAyC;IACzC,2BAA2B;AAC/B;;AAEA;GACG,uCAAuC;GACvC;AACH;;AAEA;;IAEI;AACJ;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,6BAA6B;IAC7B,SAAS;IACT,eAAe;IACf,uBAAuB;;AAE3B;;AAEA,MAAM,wBAAwB;IAC1B,iCAAiC;IACjC,uBAAuB;AAC3B;;;AAGA;IACI,UAAU;IACV,WAAW;IACX,kBAAkB;IAClB,gBAAgB;;IAEhB,YAAY;IACZ,UAAU;IACV,SAAS;IACT,gBAAgB;AACpB","sourcesContent":[":root{\r\n    --hue: 194;\r\n    --Darkmode: hsl(var(--hue), 5%,7%);\r\n    --colorprincipal: hsl(var(--hue),40%,98%);\r\n    --textcolor:rgb(7, 88, 209);\r\n}\r\n\r\nhtml.light{\r\n   background-color: var(--colorprincipal);\r\n   color: var(--textcolor)\r\n}\r\n\r\nhtml.light  .ph-sun,\r\nhtml:not(.light) .ph-moon {\r\n    display:none\r\n}\r\n\r\n#toggle-mode{\r\n    font-size: 2.2rem;\r\n    line-height: none;\r\n    background-color: transparent;\r\n    border: 0;\r\n    cursor: pointer;\r\n    color: var(--textcolor);\r\n\r\n}\r\n\r\nhtml{ /* configurar para body*/\r\n    background-color: var(--Darkmode);\r\n    color: var(--textcolor);\r\n}\r\n\r\n\r\n.sr-only{\r\n    width: 1px;\r\n    height: 1px;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    \r\n    margin: -1px;\r\n    padding: 0;\r\n    border: 0;\r\n    appearance: none;\r\n}"],"sourceRoot":""}]);
+}
+
+`, "",{"version":3,"sources":["webpack://./src/assets/css/darkmode.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;IACnB,wBAAwB;IACxB,mBAAmB;IACnB,uBAAuB;AAC3B;;;;AAIA;IACI,yDAA4C;IAC5C,sBAAsB;IACtB,kCAAkC;GACnC;AACH;;AAEA;;IAEI,YAAY;;AAEhB;;AAEA;AACA,YAAY;AACZ;;AAEA;IACI,0BAA0B;AAC9B;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,6BAA6B;IAC7B,SAAS;IACT,eAAe;IACf,uBAAuB;;AAE3B;;AAEA;IACI,yDAA2C;IAC3C,sBAAsB;IACtB,kCAAkC;IAClC,uBAAuB;;AAE3B;;;AAGA;IACI,UAAU;IACV,WAAW;IACX,kBAAkB;IAClB,gBAAgB;;IAEhB,YAAY;IACZ,UAAU;IACV,SAAS;IACT,gBAAgB;AACpB","sourcesContent":[":root{\r\n    --Darkmode: #2b2a2a;\r\n    --colorprincipal:#e0edfc;\r\n    --textcolor:#EBF0F2;\r\n    --textcolorsun: #252525;\r\n}\r\n\r\n\r\n\r\nhtml.light{\r\n    background-image: url('../img/main-bg2.svg');\r\n    background-size: cover; \r\n    background-position: center center; \r\n   color: var(--textcolorsun)\r\n}\r\n\r\nhtml.light  .ph-sun,\r\nhtml:not(.light) .ph-moon  {\r\n    display:none;\r\n    \r\n}\r\n\r\nhtml.light .ph-moon{\r\ncolor: black;\r\n}\r\n\r\nhtml:not(.light) .container{\r\n    background-color: #020000 ;\r\n}\r\n\r\n#toggle-mode{\r\n    font-size: 2.2rem;\r\n    line-height: none;\r\n    background-color: transparent;\r\n    border: 0;\r\n    cursor: pointer;\r\n    color: var(--textcolor);\r\n\r\n}\r\n\r\nhtml{ \r\n    background-image: url('../img/main-bg.svg');\r\n    background-size: cover; \r\n    background-position: center center; \r\n    color: var(--textcolor);\r\n    \r\n}\r\n\r\n\r\n.sr-only{\r\n    width: 1px;\r\n    height: 1px;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    \r\n    margin: -1px;\r\n    padding: 0;\r\n    border: 0;\r\n    appearance: none;\r\n}\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -119,7 +144,182 @@ ___CSS_LOADER_EXPORT___.push([module.id, `*{
 
 
 
-`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,SAAS;IACT,sBAAsB,EAAE,uCAAuC;AACnE","sourcesContent":["*{\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box; /* Para fazer o calculo de forma exata*/\r\n}\r\n\r\n\r\n\r\n"],"sourceRoot":""}]);
+html{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: auto;
+    border-radius: 2rem;
+    gap: 1rem;
+    word-break: break-all;
+    background-color: rgb(255, 255, 255); ;
+    
+}
+
+
+
+.senha-gerada {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: rgba(5, 187, 5, 0.699);
+    font-size: 2rem;
+    background-color: #EBF0F2;
+    border-radius: 2rem;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    align-items: center;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(244, 100%, 16%) 0%,
+    hsl(216, 86%, 77%) 8%,
+    hsl(219, 83%, 68%) 92%,
+    hsl(246, 100%, 59%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(251, 100%, 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+html.light .gera-senha{
+    color: rgb(0, 0, 0);
+}
+html:not(light) .gera-senha{
+    color: rgb(255, 255, 255);
+    
+}
+
+
+
+
+
+
+
+/* Color Theme Swatches in RGBA */
+.Design-gráfico-1-rgba { color: rgba(189, 190, 191, 1); }
+.Design-gráfico-2-rgba { color: rgba(234, 240, 242, 1); }
+.Design-gráfico-3-rgba { color: rgba(140, 140, 140, 1); }
+.Design-gráfico-4-rgba { color: rgba(63, 63, 63, 1); }
+.Design-gráfico-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Design-gráfico-1-hsla { color: hsla(213, 1, 74, 1); }
+.Design-gráfico-2-hsla { color: hsla(196, 22, 93, 1); }
+.Design-gráfico-3-hsla { color: hsla(0, 0, 55, 1); }
+.Design-gráfico-4-hsla { color: hsla(0, 0, 25, 1); }
+.Design-gráfico-5-hsla { color: hsla(0, 0, 5, 1); }
+
+`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,SAAS;IACT,sBAAsB,EAAE,uCAAuC;AACnE;;;;AAIA;IACI,oCAAoC;IACpC,gBAAgB;IAChB,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,YAAY;IACZ,mBAAmB;IACnB,SAAS;IACT,qBAAqB;IACrB,oCAAoC;;AAExC;;;;AAIA;IACI,oCAAoC;IACpC,gBAAgB;IAChB,6BAA6B;IAC7B,eAAe;IACf,yBAAyB;IACzB,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,kBAAkB;AACtB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,SAAS;IACT,iBAAiB;IACjB,oBAAoB;IACpB,oCAAoC;IACpC,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,uBAAuB;EACvB,UAAU;EACV,eAAe;EACf,mBAAmB;EACnB,wBAAwB;EACxB,iBAAiB;EACjB,yBAAyB;EACzB,0BAA0B;AAC5B;;AAEA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,WAAW;EACX,YAAY;EACZ,mBAAmB;EACnB,kCAAkC;EAClC,sBAAsB;EACtB,0BAA0B;EAC1B;;;+BAG6B;AAC/B;;AAEA;EACE,kBAAkB;EAClB,MAAM;EACN,OAAO;EACP,WAAW;EACX,YAAY;EACZ,mBAAmB;EACnB;;;;;;GAMC;AACH;;AAEA;EACE,cAAc;EACd,kBAAkB;EAClB,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;EACjB,YAAY;EACZ,+BAA+B;EAC/B,sBAAsB;EACtB,2BAA2B;EAC3B;;;+BAG6B;AAC/B;;AAEA;EACE;IACE,kBAAkB;IAClB,kBAAkB;EACpB;AACF;;AAEA;EACE,wBAAwB;EACxB,gCAAgC;AAClC;;AAEA;EACE,2BAA2B;EAC3B;;;iCAG+B;AACjC;;AAEA;EACE,2BAA2B;EAC3B,0BAA0B;AAC5B;;AAEA;EACE,0BAA0B;EAC1B;;;iCAG+B;AACjC;;AAEA;EACE,0BAA0B;EAC1B,0BAA0B;AAC5B;;AAEA;EACE,aAAa;AACf;;AAEA;IACI,mBAAmB;AACvB;AACA;IACI,yBAAyB;;AAE7B;;;;;;;;AAQA,iCAAiC;AACjC,yBAAyB,6BAA6B,EAAE;AACxD,yBAAyB,6BAA6B,EAAE;AACxD,yBAAyB,6BAA6B,EAAE;AACxD,yBAAyB,0BAA0B,EAAE;AACrD,yBAAyB,0BAA0B,EAAE;;AAErD,iCAAiC;AACjC,yBAAyB,0BAA0B,EAAE;AACrD,yBAAyB,2BAA2B,EAAE;AACtD,yBAAyB,wBAAwB,EAAE;AACnD,yBAAyB,wBAAwB,EAAE;AACnD,yBAAyB,uBAAuB,EAAE","sourcesContent":["*{\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box; /* Para fazer o calculo de forma exata*/\r\n}\r\n\r\n\r\n\r\nhtml{\r\n    font-family: \"Open Sans\", sans-serif;\r\n    font-weight: 700;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.container{\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 30rem;\r\n    height: auto;\r\n    border-radius: 2rem;\r\n    gap: 1rem;\r\n    word-break: break-all;\r\n    background-color: rgb(255, 255, 255); ;\r\n    \r\n}\r\n\r\n\r\n\r\n.senha-gerada {\r\n    font-family: \"Open Sans\", sans-serif;\r\n    font-weight: 700;\r\n    color: rgba(5, 187, 5, 0.699);\r\n    font-size: 2rem;\r\n    background-color: #EBF0F2;\r\n    border-radius: 2rem;\r\n    width: auto;\r\n    height: auto;\r\n    text-align: center;\r\n}\r\n.principal{\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n    padding-top: 2rem;\r\n    padding-bottom: 2rem;\r\n    font-family: \"Open Sans\", sans-serif;\r\n    font-weight: 400;\r\n    align-items: center;\r\n}\r\n\r\n.button-82-pushable {\r\n  position: relative;\r\n  border: none;\r\n  background: transparent;\r\n  padding: 0;\r\n  cursor: pointer;\r\n  outline-offset: 4px;\r\n  transition: filter 250ms;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  touch-action: manipulation;\r\n}\r\n\r\n.button-82-shadow {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  border-radius: 12px;\r\n  background: hsl(0deg 0% 0% / 0.25);\r\n  will-change: transform;\r\n  transform: translateY(2px);\r\n  transition:\r\n    transform\r\n    600ms\r\n    cubic-bezier(.3, .7, .4, 1);\r\n}\r\n\r\n.button-82-edge {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  border-radius: 12px;\r\n  background: linear-gradient(\r\n    to left,\r\n    hsl(244, 100%, 16%) 0%,\r\n    hsl(216, 86%, 77%) 8%,\r\n    hsl(219, 83%, 68%) 92%,\r\n    hsl(246, 100%, 59%) 100%\r\n  );\r\n}\r\n\r\n.button-82-front {\r\n  display: block;\r\n  position: relative;\r\n  padding: 12px 27px;\r\n  border-radius: 12px;\r\n  font-size: 1.1rem;\r\n  color: white;\r\n  background: hsl(251, 100%, 47%);\r\n  will-change: transform;\r\n  transform: translateY(-4px);\r\n  transition:\r\n    transform\r\n    600ms\r\n    cubic-bezier(.3, .7, .4, 1);\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .button-82-front {\r\n    font-size: 1.25rem;\r\n    padding: 12px 42px;\r\n  }\r\n}\r\n\r\n.button-82-pushable:hover {\r\n  filter: brightness(110%);\r\n  -webkit-filter: brightness(110%);\r\n}\r\n\r\n.button-82-pushable:hover .button-82-front {\r\n  transform: translateY(-6px);\r\n  transition:\r\n    transform\r\n    250ms\r\n    cubic-bezier(.3, .7, .4, 1.5);\r\n}\r\n\r\n.button-82-pushable:active .button-82-front {\r\n  transform: translateY(-2px);\r\n  transition: transform 34ms;\r\n}\r\n\r\n.button-82-pushable:hover .button-82-shadow {\r\n  transform: translateY(4px);\r\n  transition:\r\n    transform\r\n    250ms\r\n    cubic-bezier(.3, .7, .4, 1.5);\r\n}\r\n\r\n.button-82-pushable:active .button-82-shadow {\r\n  transform: translateY(1px);\r\n  transition: transform 34ms;\r\n}\r\n\r\n.button-82-pushable:focus:not(:focus-visible) {\r\n  outline: none;\r\n}\r\n\r\nhtml.light .gera-senha{\r\n    color: rgb(0, 0, 0);\r\n}\r\nhtml:not(light) .gera-senha{\r\n    color: rgb(255, 255, 255);\r\n    \r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n/* Color Theme Swatches in RGBA */\r\n.Design-gráfico-1-rgba { color: rgba(189, 190, 191, 1); }\r\n.Design-gráfico-2-rgba { color: rgba(234, 240, 242, 1); }\r\n.Design-gráfico-3-rgba { color: rgba(140, 140, 140, 1); }\r\n.Design-gráfico-4-rgba { color: rgba(63, 63, 63, 1); }\r\n.Design-gráfico-5-rgba { color: rgba(12, 12, 12, 1); }\r\n\r\n/* Color Theme Swatches in HSLA */\r\n.Design-gráfico-1-hsla { color: hsla(213, 1, 74, 1); }\r\n.Design-gráfico-2-hsla { color: hsla(196, 22, 93, 1); }\r\n.Design-gráfico-3-hsla { color: hsla(0, 0, 55, 1); }\r\n.Design-gráfico-4-hsla { color: hsla(0, 0, 25, 1); }\r\n.Design-gráfico-5-hsla { color: hsla(0, 0, 5, 1); }\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -217,6 +417,42 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -628,6 +864,28 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/img/main-bg.svg":
+/*!************************************!*\
+  !*** ./src/assets/img/main-bg.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "e96d396242da831ac076.svg";
+
+/***/ }),
+
+/***/ "./src/assets/img/main-bg2.svg":
+/*!*************************************!*\
+  !*** ./src/assets/img/main-bg2.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "7b56f3bcd5a8d5896887.svg";
+
 /***/ })
 
 /******/ 	});
@@ -656,6 +914,9 @@ module.exports = styleTagTransform;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -681,6 +942,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -695,6 +968,55 @@ module.exports = styleTagTransform;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

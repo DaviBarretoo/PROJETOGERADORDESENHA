@@ -6,3 +6,178 @@
 
 
 
+html{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: auto;
+    border-radius: 2rem;
+    gap: 1rem;
+    word-break: break-all;
+    background-color: rgb(255, 255, 255); ;
+    
+}
+
+
+
+.senha-gerada {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: rgba(5, 187, 5, 0.699);
+    font-size: 2rem;
+    background-color: #EBF0F2;
+    border-radius: 2rem;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    align-items: center;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(244, 100%, 16%) 0%,
+    hsl(216, 86%, 77%) 8%,
+    hsl(219, 83%, 68%) 92%,
+    hsl(246, 100%, 59%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(251, 100%, 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+html.light .gera-senha{
+    color: rgb(0, 0, 0);
+}
+html:not(light) .gera-senha{
+    color: rgb(255, 255, 255);
+    
+}
+
+
+
+
+
+
+
+/* Color Theme Swatches in RGBA */
+.Design-gráfico-1-rgba { color: rgba(189, 190, 191, 1); }
+.Design-gráfico-2-rgba { color: rgba(234, 240, 242, 1); }
+.Design-gráfico-3-rgba { color: rgba(140, 140, 140, 1); }
+.Design-gráfico-4-rgba { color: rgba(63, 63, 63, 1); }
+.Design-gráfico-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Design-gráfico-1-hsla { color: hsla(213, 1, 74, 1); }
+.Design-gráfico-2-hsla { color: hsla(196, 22, 93, 1); }
+.Design-gráfico-3-hsla { color: hsla(0, 0, 55, 1); }
+.Design-gráfico-4-hsla { color: hsla(0, 0, 25, 1); }
+.Design-gráfico-5-hsla { color: hsla(0, 0, 5, 1); }
+
