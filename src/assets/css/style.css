@@ -111,13 +111,6 @@ html{
     cubic-bezier(.3, .7, .4, 1);
 }
 
-@media (min-width: 768px) {
-  .button-82-front {
-    font-size: 1.25rem;
-    padding: 12px 42px;
-  }
-}
-
 .button-82-pushable:hover {
   filter: brightness(110%);
   -webkit-filter: brightness(110%);
