@@ -71,8 +71,13 @@ html:not(.light) .ph-moon  {
 }
 
 html.light .ph-moon{
-color: black;
+color: rgb(3, 163, 255);
 }
+
+html:not(.light) .ph-sun{
+    color: rgb(184, 3, 255);
+    }
+    
 
 html:not(.light) .container{
     background-color: #020000 ;
@@ -80,9 +85,12 @@ html:not(.light) .container{
 }
 
 #toggle-mode{
+  
+    margin-top: 0.2rem;
     font-size: 2.2rem;
     line-height: none;
     background-color: transparent;
+    border-radius: 999rem;
     border: 0;
     cursor: pointer;
     color: var(--textcolor);
@@ -110,7 +118,7 @@ html{
     appearance: none;
 }
 
-`, "",{"version":3,"sources":["webpack://./src/assets/css/darkmode.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;IACnB,wBAAwB;IACxB,mBAAmB;IACnB,uBAAuB;AAC3B;;;;AAIA;IACI,yDAA4C;IAC5C,sBAAsB;IACtB,kCAAkC;GACnC;AACH;;AAEA;;IAEI,YAAY;;AAEhB;;AAEA;AACA,YAAY;AACZ;;AAEA;IACI,0BAA0B;IAC1B,uDAAuD;AAC3D;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,6BAA6B;IAC7B,SAAS;IACT,eAAe;IACf,uBAAuB;;AAE3B;;AAEA;IACI,yDAA2C;IAC3C,sBAAsB;IACtB,kCAAkC;IAClC,uBAAuB;;AAE3B;;;AAGA;IACI,UAAU;IACV,WAAW;IACX,kBAAkB;IAClB,gBAAgB;;IAEhB,YAAY;IACZ,UAAU;IACV,SAAS;IACT,gBAAgB;AACpB","sourcesContent":[":root{\r\n    --Darkmode: #2b2a2a;\r\n    --colorprincipal:#e0edfc;\r\n    --textcolor:#EBF0F2;\r\n    --textcolorsun: #252525;\r\n}\r\n\r\n\r\n\r\nhtml.light{\r\n    background-image: url('../img/main-bg2.svg');\r\n    background-size: cover; \r\n    background-position: center center; \r\n   color: var(--textcolorsun)\r\n}\r\n\r\nhtml.light  .ph-sun,\r\nhtml:not(.light) .ph-moon  {\r\n    display:none;\r\n    \r\n}\r\n\r\nhtml.light .ph-moon{\r\ncolor: black;\r\n}\r\n\r\nhtml:not(.light) .container{\r\n    background-color: #020000 ;\r\n    box-shadow: 0px 0px 30px 20px rgba(177, 54, 248, 0.308); \r\n}\r\n\r\n#toggle-mode{\r\n    font-size: 2.2rem;\r\n    line-height: none;\r\n    background-color: transparent;\r\n    border: 0;\r\n    cursor: pointer;\r\n    color: var(--textcolor);\r\n\r\n}\r\n\r\nhtml{ \r\n    background-image: url('../img/main-bg.svg');\r\n    background-size: cover; \r\n    background-position: center center; \r\n    color: var(--textcolor);\r\n    \r\n}\r\n\r\n\r\n.sr-only{\r\n    width: 1px;\r\n    height: 1px;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    \r\n    margin: -1px;\r\n    padding: 0;\r\n    border: 0;\r\n    appearance: none;\r\n}\r\n\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/assets/css/darkmode.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;IACnB,wBAAwB;IACxB,mBAAmB;IACnB,uBAAuB;AAC3B;;;;AAIA;IACI,yDAA4C;IAC5C,sBAAsB;IACtB,kCAAkC;GACnC;AACH;;AAEA;;IAEI,YAAY;;AAEhB;;AAEA;AACA,uBAAuB;AACvB;;AAEA;IACI,uBAAuB;IACvB;;;AAGJ;IACI,0BAA0B;IAC1B,uDAAuD;AAC3D;;AAEA;;IAEI,kBAAkB;IAClB,iBAAiB;IACjB,iBAAiB;IACjB,6BAA6B;IAC7B,qBAAqB;IACrB,SAAS;IACT,eAAe;IACf,uBAAuB;;AAE3B;;AAEA;IACI,yDAA2C;IAC3C,sBAAsB;IACtB,kCAAkC;IAClC,uBAAuB;;AAE3B;;;AAGA;IACI,UAAU;IACV,WAAW;IACX,kBAAkB;IAClB,gBAAgB;;IAEhB,YAAY;IACZ,UAAU;IACV,SAAS;IACT,gBAAgB;AACpB","sourcesContent":[":root{\r\n    --Darkmode: #2b2a2a;\r\n    --colorprincipal:#e0edfc;\r\n    --textcolor:#EBF0F2;\r\n    --textcolorsun: #252525;\r\n}\r\n\r\n\r\n\r\nhtml.light{\r\n    background-image: url('../img/main-bg2.svg');\r\n    background-size: cover; \r\n    background-position: center center; \r\n   color: var(--textcolorsun)\r\n}\r\n\r\nhtml.light  .ph-sun,\r\nhtml:not(.light) .ph-moon  {\r\n    display:none;\r\n    \r\n}\r\n\r\nhtml.light .ph-moon{\r\ncolor: rgb(3, 163, 255);\r\n}\r\n\r\nhtml:not(.light) .ph-sun{\r\n    color: rgb(184, 3, 255);\r\n    }\r\n    \r\n\r\nhtml:not(.light) .container{\r\n    background-color: #020000 ;\r\n    box-shadow: 0px 0px 30px 20px rgba(177, 54, 248, 0.308); \r\n}\r\n\r\n#toggle-mode{\r\n  \r\n    margin-top: 0.2rem;\r\n    font-size: 2.2rem;\r\n    line-height: none;\r\n    background-color: transparent;\r\n    border-radius: 999rem;\r\n    border: 0;\r\n    cursor: pointer;\r\n    color: var(--textcolor);\r\n\r\n}\r\n\r\nhtml{ \r\n    background-image: url('../img/main-bg.svg');\r\n    background-size: cover; \r\n    background-position: center center; \r\n    color: var(--textcolor);\r\n    \r\n}\r\n\r\n\r\n.sr-only{\r\n    width: 1px;\r\n    height: 1px;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    \r\n    margin: -1px;\r\n    padding: 0;\r\n    border: 0;\r\n    appearance: none;\r\n}\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

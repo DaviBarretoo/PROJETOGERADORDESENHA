@@ -21,8 +21,13 @@ html:not(.light) .ph-moon  {
 }
 
 html.light .ph-moon{
-color: black;
+color: rgb(3, 163, 255);
 }
+
+html:not(.light) .ph-sun{
+    color: rgb(184, 3, 255);
+    }
+    
 
 html:not(.light) .container{
     background-color: #020000 ;
@@ -30,9 +35,12 @@ html:not(.light) .container{
 }
 
 #toggle-mode{
+  
+    margin-top: 0.2rem;
     font-size: 2.2rem;
     line-height: none;
     background-color: transparent;
+    border-radius: 999rem;
     border: 0;
     cursor: pointer;
     color: var(--textcolor);
