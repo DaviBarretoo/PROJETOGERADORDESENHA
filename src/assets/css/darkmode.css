@@ -26,6 +26,7 @@ color: black;
 
 html:not(.light) .container{
     background-color: #020000 ;
+    box-shadow: 0px 0px 30px 20px rgba(177, 54, 248, 0.308); 
 }
 
 #toggle-mode{

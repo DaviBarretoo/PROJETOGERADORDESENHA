@@ -22,7 +22,8 @@ html{
     border-radius: 2rem;
     gap: 1rem;
     word-break: break-all;
-    background-color: rgb(255, 255, 255); ;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 20px rgba(54, 219, 248, 0.308); 
     
 }
 
@@ -48,9 +49,11 @@ html{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     align-items: center;
+    
 }
 
-.button-82-pushable {
+.gera-senha-principal {
+  margin: 2rem;
   position: relative;
   border: none;
   background: transparent;
@@ -63,7 +66,7 @@ html{
   touch-action: manipulation;
 }
 
-.button-82-shadow {
+.gera-senha-sombra {
   position: absolute;
   top: 0;
   left: 0;
@@ -79,7 +82,7 @@ html{
     cubic-bezier(.3, .7, .4, 1);
 }
 
-.button-82-edge {
+.gera-senha-borda {
   position: absolute;
   top: 0;
   left: 0;
@@ -95,7 +98,7 @@ html{
   );
 }
 
-.button-82-front {
+.gera-senha-front {
   display: block;
   position: relative;
   padding: 12px 27px;
@@ -111,12 +114,12 @@ html{
     cubic-bezier(.3, .7, .4, 1);
 }
 
-.button-82-pushable:hover {
+.gera-senha-principal:hover {
   filter: brightness(110%);
   -webkit-filter: brightness(110%);
 }
 
-.button-82-pushable:hover .button-82-front {
+.gera-senha-principal:hover .gera-senha-front {
   transform: translateY(-6px);
   transition:
     transform
@@ -124,27 +127,16 @@ html{
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-82-pushable:active .button-82-front {
+.gera-senha-principal:active .gera-senha-front {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
 
-.button-82-pushable:hover .button-82-shadow {
-  transform: translateY(4px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
 
-.button-82-pushable:active .button-82-shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
 
-.button-82-pushable:focus:not(:focus-visible) {
-  outline: none;
-}
+
+
+
 
 html.light .gera-senha{
     color: rgb(0, 0, 0);
