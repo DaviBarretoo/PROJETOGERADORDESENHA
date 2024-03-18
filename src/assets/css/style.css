@@ -27,12 +27,39 @@ html{
     
 }
 
+.copiartext{
+  display: flex;
+  align-self: center;
+align-items: center;
+  font-size: 1rem;
+  height: 1rem;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+  box-shadow: 1px 1px 10px 10px rgba(125, 125, 126, 0.027);
+  background: transparent;
+  cursor: pointer;
+  
+}
 
+.copiartext:hover{
+ color: rgba(0, 255, 42, 0.911);
+  
+}
+
+html:not(.light) .copiartext {
+  color: rgb(255, 255, 255);
+}
+
+html:not(.light) .copiartext:hover{
+  color: rgba(0, 255, 42, 0.911);
+   
+ }
 
 .senha-gerada {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    color: rgba(5, 187, 5, 0.699);
+    color: rgba(5, 8, 187, 0.699);
     font-size: 2rem;
     background-color: #EBF0F2;
     border-radius: 2rem;
@@ -48,6 +75,7 @@ html{
     padding-bottom: 2rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
+    font-size: 1.4rem;
     align-items: center;
     
 }
@@ -106,7 +134,6 @@ html{
   font-size: 1.1rem;
   color: white;
   background: hsl(251, 100%, 47%);
-  will-change: transform;
   transform: translateY(-4px);
   transition:
     transform
@@ -145,24 +172,28 @@ html:not(light) .gera-senha{
     color: rgb(255, 255, 255);
     
 }
+input[type="checkbox"] {
+appearance: none; /* Para navegadores que seguem o padrão */
+  width: 20px; 
+  height: 20px; 
+  border: 2px solid #333; 
+  border-radius: 10px; /* Borda arredondada */
+  outline: none; /* Remove o contorno ao focar */
+}
+
+input[type="checkbox"]:checked {
+  background-image: url('../img/check-circle.svg') ;
+  background-position: center center;
+  background-color: rgba(30, 255, 0, 0.514); }
+
+/* Estilo para o checkbox quando o mouse passa por cima */
+input[type="checkbox"]:hover {
+  border-color: #108002; /* Cor da borda quando o mouse passa por cima */
+}
 
 
 
 
 
 
-
-/* Color Theme Swatches in RGBA */
-.Design-gráfico-1-rgba { color: rgba(189, 190, 191, 1); }
-.Design-gráfico-2-rgba { color: rgba(234, 240, 242, 1); }
-.Design-gráfico-3-rgba { color: rgba(140, 140, 140, 1); }
-.Design-gráfico-4-rgba { color: rgba(63, 63, 63, 1); }
-.Design-gráfico-5-rgba { color: rgba(12, 12, 12, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Design-gráfico-1-hsla { color: hsla(213, 1, 74, 1); }
-.Design-gráfico-2-hsla { color: hsla(196, 22, 93, 1); }
-.Design-gráfico-3-hsla { color: hsla(0, 0, 55, 1); }
-.Design-gráfico-4-hsla { color: hsla(0, 0, 25, 1); }
-.Design-gráfico-5-hsla { color: hsla(0, 0, 5, 1); }
 
