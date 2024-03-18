@@ -1,6 +1,134 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/dados.js":
+/*!******************************!*\
+  !*** ./src/modules/dados.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ gera)
+/* harmony export */ });
+/* harmony import */ var _gerasenha_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gerasenha.js */ "./src/modules/gerasenha.js");
+/* harmony import */ var _formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./formGeraSenha.js */ "./src/modules/formGeraSenha.js");
+
+
+
+function gera() {
+  var senha = (0,_gerasenha_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__.qtdCaracteres.value, _formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__.chkMaiusculas.checked, _formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__.chkMinusculas.checked, _formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__.chkNumeros.checked, _formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__.chkSimbolos.checked);
+  return senha || "Nada Selecionado";
+}
+(0,_formGeraSenha_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+/***/ }),
+
+/***/ "./src/modules/formGeraSenha.js":
+/*!**************************************!*\
+  !*** ./src/modules/formGeraSenha.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   chkMaiusculas: () => (/* binding */ chkMaiusculas),
+/* harmony export */   chkMinusculas: () => (/* binding */ chkMinusculas),
+/* harmony export */   chkNumeros: () => (/* binding */ chkNumeros),
+/* harmony export */   chkSimbolos: () => (/* binding */ chkSimbolos),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   qtdCaracteres: () => (/* binding */ qtdCaracteres),
+/* harmony export */   senhaGerada: () => (/* binding */ senhaGerada)
+/* harmony export */ });
+/* harmony import */ var _gerasenha_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gerasenha.js */ "./src/modules/gerasenha.js");
+/* harmony import */ var _dados_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dados.js */ "./src/modules/dados.js");
+
+
+var senhaGerada = document.querySelector('.senha-gerada');
+var qtdCaracteres = document.querySelector('.qtd-caracteres');
+var chkMaiusculas = document.querySelector('.chk-maiusculas');
+var chkMinusculas = document.querySelector('.chk-minusculas');
+var chkNumeros = document.querySelector('.chk-numeros');
+var chkSimbolos = document.querySelector('.chk-simbolos');
+var gerarSenha = document.querySelector('.gera-senha-principal');
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  gerarSenha.addEventListener('click', function () {
+    senhaGerada.innerHTML = (0,_dados_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  });
+});
+
+(0,_gerasenha_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+/***/ }),
+
+/***/ "./src/modules/geradores.js":
+/*!**********************************!*\
+  !*** ./src/modules/geradores.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   geraMaiuscula: () => (/* binding */ geraMaiuscula),
+/* harmony export */   geraMinuscula: () => (/* binding */ geraMinuscula),
+/* harmony export */   geraNumeros: () => (/* binding */ geraNumeros),
+/* harmony export */   geraSimbolos: () => (/* binding */ geraSimbolos)
+/* harmony export */ });
+//Tabela ascii js
+
+var rand = function rand(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
+
+//Função para gerar número aleatorio
+
+var geraMaiuscula = function geraMaiuscula() {
+  return String.fromCharCode(rand(65, 91));
+};
+var geraMinuscula = function geraMinuscula() {
+  return String.fromCharCode(rand(97, 123));
+};
+var geraNumeros = function geraNumeros() {
+  return String.fromCharCode(rand(48, 58));
+};
+var simbolos = '.@!,#$-';
+var geraSimbolos = function geraSimbolos() {
+  return simbolos[rand(0, simbolos.length)];
+};
+
+
+/***/ }),
+
+/***/ "./src/modules/gerasenha.js":
+/*!**********************************!*\
+  !*** ./src/modules/gerasenha.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ geraSenha)
+/* harmony export */ });
+/* harmony import */ var _geradores_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./geradores.js */ "./src/modules/geradores.js");
+
+function geraSenha(qtd, Maiusculas, minusculas, numeros, simbolos) {
+  var senhaArray = [];
+  qtd = Number(qtd);
+  for (var i = 0; i < qtd; i++) {
+    Maiusculas && senhaArray.push((0,_geradores_js__WEBPACK_IMPORTED_MODULE_0__.geraMaiuscula)());
+    minusculas && senhaArray.push((0,_geradores_js__WEBPACK_IMPORTED_MODULE_0__.geraMinuscula)());
+    numeros && senhaArray.push((0,_geradores_js__WEBPACK_IMPORTED_MODULE_0__.geraNumeros)());
+    simbolos && senhaArray.push((0,_geradores_js__WEBPACK_IMPORTED_MODULE_0__.geraSimbolos)());
+  }
+  return senhaArray.join('').slice(0, qtd); // Aqui estamos usando .join para definir como um string vazia ou seja não vai ter espaços  e .slice para fatiar ela na quantidade requisitada
+}
+
+/***/ }),
+
 /***/ "./src/modules/toggle-mode.js":
 /*!************************************!*\
   !*** ./src/modules/toggle-mode.js ***!
@@ -1031,9 +1159,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_darkmode_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/darkmode.css */ "./src/assets/css/darkmode.css");
 /* harmony import */ var _modules_toggle_mode_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/toggle-mode.js */ "./src/modules/toggle-mode.js");
 /* harmony import */ var _modules_toggle_mode_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_toggle_mode_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_dados_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dados.js */ "./src/modules/dados.js");
 
 
 
+
+(0,_modules_dados_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 })();
 
 /******/ })()
