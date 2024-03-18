@@ -19,7 +19,8 @@
                   <i class="ph-bold ph-moon"></i>
           </button>
         <img src="../src/assets/img/img.png" alt="Cadeado">
-<div class="senha-gerada"> <p>Selecione as Opções </p> </div>
+<div class="senha-gerada" id="texto"> <p>Selecione as Opções </p> </div>
+<button onclick="copiar()" class="copiartext" >Copiar texto</button>
 <div class="principal">
 <p> Quantidade de caracteres : <input type="number" min="1" max="20"  class="qtd-caracteres"></p>
 <p> Adicionar Maiúsculas :<input type="checkbox" class="chk-maiusculas"></p>
@@ -34,14 +35,16 @@
     </span>
   </button>
 </div>
-
-
-
-
     </div>
-
-
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="./assets/js/bundle.js"></script>
+  <script>
+      function copiar(){
+        let texto = document.getElementById("texto").innerText;
+        navigator.clipboard.writeText(texto);
+        alert("Senha copiada com sucesso")
+      }
+    </script> 
 </body>
+
 </html>
