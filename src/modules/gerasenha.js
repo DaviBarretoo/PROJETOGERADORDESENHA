@@ -11,5 +11,4 @@ for(let i = 0; i< qtd; i++){
 }
 
 return senhaArray.join('').slice(0,qtd)// Aqui estamos usando .join para definir como um string vazia ou seja não vai ter espaços  e .slice para fatiar ela na quantidade requisitada
-
 }
